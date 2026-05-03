@@ -1,0 +1,242 @@
+/* Estilos para la página de Blender, Unity y Renpy - Colores del índice */
+
+
+.cuerpo {
+    background-color: #e7f7fe;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.columna {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    border: solid;
+    border-color: #3447db;
+    border-width: 2px;
+    border-top-width: 0px;
+    padding: 20px;
+    background-color: #e7f7fe;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* Texto de introducción */
+.texto-programas {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 25px 30px;
+    background-color: white;
+    border: 2px solid #3447db;
+    border-radius: 20px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.texto-programas p {
+    margin: 0;
+}
+
+.texto-programas strong {
+    color: #3934db;
+}
+
+/* ===== LETRAS BLANCAS EN CABECERA (cumple tu petición) ===== */
+
+        .cabecera h1,
+        .cabecera p {
+            color: white !important;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
+        }
+
+        .cabecera h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            border-bottom: 3px solid rgba(255,255,255,0.5);
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        .cabecera p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            max-width: 80%;
+            margin-top: 0.25rem;
+            background-color: rgba(0,0,0,0.3);
+            padding: 6px 16px;
+            border-radius: 40px;
+            backdrop-filter: blur(3px);
+            text-align: center;
+            display: inline-block;
+
+        }
+
+/* Grid para los videos: 2 arriba, 1 abajo centrado */
+.grid-videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* El tercer video ocupa ambas columnas y se centra */
+.video-centrado {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+    min-width: 300px;
+}
+
+/* Tarjeta de cada video */
+.video-card {
+    background-color: white;
+    border: 2px solid #3447db;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: #3934db;
+}
+
+.video-card video {
+    width: 100%;
+    border-radius: 15px;
+    outline: none;
+    background-color: #000;
+    border: 1px solid #3447db;
+}
+
+.video-card h3 {
+    font-size: 1.4em;
+    margin: 15px 0 5px 0;
+    color: #3934db;
+}
+
+.video-card .fecha {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.video-card .descripcion {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* Botón de descarga */
+.boton-descarga {
+    display: inline-block;
+    background-color: #3934db;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-descarga:hover {
+    background-color: #3447db;
+    transform: scale(1.05);
+}
+
+.boton-descarga:active {
+    transform: scale(0.95);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+    .grid-videos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .video-centrado {
+        grid-column: 1;
+        width: 100%;
+    }
+    
+    .texto-programas {
+        font-size: 16px;
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .video-card h3 {
+        font-size: 1.2em;
+    }
+    
+    .columna {
+        padding: 15px;
+    }
+    
+    .boton-descarga {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-card {
+        padding: 15px;
+    }
+    
+    .video-card .descripcion {
+        font-size: 0.85em;
+    }
+}

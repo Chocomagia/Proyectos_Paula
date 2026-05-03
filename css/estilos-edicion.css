@@ -1,0 +1,233 @@
+/* Estilos para la página de edición - Colores del índice */
+
+.cuerpo {
+    background-color: #e7f7fe;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.columna {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    border: solid;
+    border-color: #3447db;
+    border-width: 2px;
+    border-top-width: 0px;
+    padding: 20px;
+    background-color: #e7f7fe;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* Texto de introducción */
+.texto-edicion {
+    font-size: 18px;
+    text-align: center;
+    margin: 20px auto;
+    padding: 25px 30px;
+    background-color: white;
+    border: 2px solid #3447db;
+    border-radius: 20px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+.texto-edicion p {
+    margin: 0;
+}
+
+.texto-edicion strong {
+    color: #3934db;
+}
+
+/* Grid para los 4 videos (2 arriba, 2 abajo) */
+.grid-videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Tarjeta de cada video */
+
+.video-card {
+    background-color: white;
+    border: 2px solid #3447db;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: #3934db;
+}
+
+.video-card video {
+    width: 200px;
+    border-radius: 15px;
+    outline: none;
+    background-color: #000;
+    border: 1px solid #3447db;
+}
+
+.video-card h3 {
+    font-size: 1.4em;
+    margin: 15px 0 5px 0;
+    color: #3934db;
+}
+
+.video-card .fecha {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.video-card .descripcion {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.video-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene la proporción del video */
+    border-radius: 15px;
+    border: 1px solid #3447db;
+}
+
+.image-container {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    width: 33.33%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo común para el contenedor del video/miniatura */
+.video-card video,
+.video-card a {
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #3447db;
+    transition: all 0.3s ease;
+}
+
+.video-card a {
+    text-decoration: none;
+}
+
+.video-card a img {
+    width: 100%;
+    aspect-ratio: 560/315;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+
+/* Efecto hover para ambos */
+.video-card video:hover,
+.video-card a:hover {
+    border-color: #3934db;
+    transform: scale(1.02);
+}
+
+/* Ajusta el estilo existente del video */
+.video-card video {
+    width: 200px;
+    border-radius: 15px;
+    outline: none;
+    background-color: #000;
+    border: 1px solid #3447db;
+    margin: 0 auto; /* Centra horizontalmente */
+    
+}
+
+/* ===== LETRAS BLANCAS EN CABECERA (cumple tu petición) ===== */
+
+        .cabecera h1,
+        .cabecera p {
+            color: white !important;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            letter-spacing: 1px;
+        }
+
+        .cabecera h1 {
+            font-size: 3.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            border-bottom: 3px solid rgba(255,255,255,0.5);
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        .cabecera p {
+            font-size: 1.3rem;
+            font-weight: 500;
+            max-width: 80%;
+            margin-top: 0.25rem;
+            background-color: rgba(0,0,0,0.3);
+            padding: 6px 16px;
+            border-radius: 40px;
+            backdrop-filter: blur(3px);
+            text-align: center;
+            display: inline-block;
+
+        }
+
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+    .grid-videos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+    }
+    
+    .texto-edicion {
+        font-size: 16px;
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .video-card h3 {
+        font-size: 1.2em;
+    }
+    
+    .columna {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-card {
+        padding: 15px;
+    }
+    
+    .video-card .descripcion {
+        font-size: 0.85em;
+    }
+}
