@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blender, Unity y Renpy - Paula</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../css/estilos-cabecera.css">
+        <link rel="stylesheet" href="../css/estilos-programas.css">
+    </head>
+
+    <body>
+        <div class="contenedor">
+        <header>
+            <!-- Aquí ponemos la imagen que se encuentra en la cabecera de nuestra web -->
+            <video src="../video/Unity_modificado.mp4" alt="Paula explicando algo" controls autoplay muted loop>
+               
+            </video>
+            <div class="cabecera">
+                <h1>Proyectos</h1>
+                <p>Adobe Premier, Adobe lightroom, Blender, Unity, Reaper, Canva</p>
+            </div>
+        </header>
+    </div>
+    
+        <nav>
+            <div class="barra_nav">
+                <a href="../Indice.html">Página principal</a>
+                <a href="edicion.html">Edición</a>
+                <a href="programas.html" class="activo">Blender, Unity y renpy</a>
+                <a href="banda.html">Banda sonora</a>
+            </div>
+        </nav>
+
+        <div class="columna">
+            <div class="texto-programas">
+                <p>Estos proyectos han sido creados con <strong>Blender</strong> para modelado 3D y animación, <strong>Unity</strong> para desarrollo de videojuegos y <strong>Ren'Py</strong> para novelas visuales. Aquí puedes ver algunos de mis trabajos.</p>
+            </div>
+
+            <div class="grid-videos">
+                
+                 <!-- VIDEO 1 - Unity (centrado abajo) -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="../video/Unity.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                    <h3>Proyecto en Unity</h3>
+                    <p class="fecha">Editado: 5 de mayo de 2025</p>
+                    <p class="descripcion">Desarrollo completo de un juego 3D: programación en C#, diseño en Blender de personajes, animaciones, música y configuración para gafas VR.</p>
+                    
+                    <!-- Botón de descarga del ejecutable -->
+                    <a href="../Descargas/BuildPC_DEFINITIVO.zip" download class="boton-descarga">Descargar ejecutable (.exe)</a>
+                </div>
+                
+
+                <!-- VIDEO 2 - Ren' Py -->
+                <div class="video-card">
+                    <video controls preload="metadata">
+                        <source src="../video/Videojuego.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                    <h3>Novela visual en Ren'Py</h3>
+                    <p class="fecha">Editado: 14 de diciembre de 2024. Actualmente se encuentra en desarrollo</p>
+                    <p class="descripcion">Creación de novela visual interactiva: escritura de diálogos, creación de personajes, fondos, música y sistema de elecciones.</p>
+                </div>
+                <!-- VIDEO 3 - Blender -->
+                <div class="video-card video-centrado">
+                    <video controls preload="metadata">
+                        <source src="../video/Blender.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                    <h3>Animación en Blender</h3>
+                    <p class="fecha">Editado: 25 de junio de 2025</p>
+                    <p class="descripcion">Modelado 3D del personaje y del entorno, texturizado, rigging y animación. Creé la escena completa y la iluminación. Posteriormente, edité el vídeo con <strong>Adobe Premier</strong> Para añadirle la música y los efectos de sonido</strong></p>
+                </div>
+
+                
+            </div>
+        </div>
+
+        <audio id="hoverNavSound" src="../sonidos/hover.mp3"></audio>
+        
+        <script src="../JavaScript/script-programas.js"></script>            
+    </body>
+</html>
